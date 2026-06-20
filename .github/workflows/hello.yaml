@@ -1,0 +1,18 @@
+#workflow
+#workflow should have name
+
+name: Hello
+
+#on tells when workflow should run , use indentation
+on:
+  workflow_dispatch:   
+
+#jobs tells what the workflow should do, more than one jobs we can use, use indentation
+jobs:
+  say-hello:
+#creates an ephermal container on ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to everyone
+        run: echo "hello dosto"
+
